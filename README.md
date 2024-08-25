@@ -18,42 +18,42 @@ Bienvenido al proyecto **Notas App**, una aplicación de notas desarrollada en S
 ## 📚 Contenido del Curso
 
 1. **Introducción al Testing en Swift**  
-   - **Video**: [Introducción CURSO TESTING en SWIFT (Parte 1)](https://www.swiftbeta.com/testing-parte-1)  
+   - **Video**: [Introducción CURSO TESTING en SWIFT (Parte 1)](https://www.swiftbeta.com/introduccion-curso-testing-en-swift-y-swiftui/)  
    - **Descripción**:  
      ¿Cómo crear tests en Swift? ¿Por qué son importantes? Aquí aprenderás los beneficios de los tests en Swift. En esta sección se crea una app desde cero en SwiftUI, añadiendo Unit Tests, Integration Tests, Snapshot Tests y UITests.
 
 2. **Creación de la App de Notas en SwiftUI**  
-   - **Video**: [Introducción CURSO TESTING en SWIFT - Creamos nuestra app de notas en SwiftUI (Parte 2)](https://www.swiftbeta.com/testing-parte-2)  
+   - **Video**: [Introducción CURSO TESTING en SWIFT - Creamos nuestra app de notas en SwiftUI (Parte 2)](https://www.swiftbeta.com/introduccion-curso-testing-en-swift-creamos-nuestra-app-de-notas-en-swiftui/)  
    - **Descripción**:  
      Desarrollo de una app de notas con SwiftUI que incluye las funcionalidades de crear, actualizar y borrar notas. Este código es la base sobre la cual se realizarán los tests.
 
 3. **Unit Tests y Code Coverage**  
-   - **Video**: [Introducción a UNIT TESTS y CODE COVERAGE en SWIFT (Parte 3)](https://www.swiftbeta.com/testing-parte-3)  
+   - **Video**: [Introducción a UNIT TESTS y CODE COVERAGE en SWIFT (Parte 3)](https://www.swiftbeta.com/introduccion-a-unit-tests-y-code-coverage-en-swift/)  
    - **Descripción**:  
      Implementación de tests unitarios en Swift. Se realizan pruebas pequeñas, independientes y rápidas de ejecutar para el modelo y el ViewModel de la app.
 
 4. **Integration Tests con SwiftData**  
-   - **Video**: [Introducción INTEGRATION TESTS con SWIFTDATA en SWIFT (Parte 4)](https://www.swiftbeta.com/testing-parte-4)  
+   - **Video**: [Introducción INTEGRATION TESTS con SWIFTDATA en SWIFT (Parte 4)](https://www.swiftbeta.com/introduccion-test-integracion-con-swiftdata-en-swift/)  
    - **Descripción**:  
      Pruebas de integración para validar el comportamiento de diferentes componentes conectados, utilizando SwiftData y creando varios UseCases en la app de notas.
 
 5. **Mocks e Inyección de Dependencias**  
-   - **Video**: [¿Qué es un MOCK e Inyección de dependencias en TESTING? (Parte 5)](https://www.swiftbeta.com/testing-parte-5)  
+   - **Video**: [¿Qué es un MOCK e Inyección de dependencias en TESTING? (Parte 5)](https://www.swiftbeta.com/que-es-un-mock-y-inyeccion-de-dependencias-en-swift/)  
    - **Descripción**:  
      Introducción a los mocks en Swift y cómo inyectar dependencias para realizar tests más eficaces y aislados.
 
 6. **Completar la App y Resolver Ejercicios**  
-   - **Video**: [App de notas completa (SwiftUI) con Tests UNITARIOS, Mocks y Tests de INTEGRACIÓN (Parte 6)](https://www.swiftbeta.com/testing-parte-6)  
+   - **Video**: [App de notas completa (SwiftUI) con Tests UNITARIOS, Mocks y Tests de INTEGRACIÓN (Parte 6)](https://www.swiftbeta.com/app-notas-completa-con-test-unitarios-y-de-integracion-en-swift-y-swiftui/)  
    - **Descripción**:  
      Resolución de ejercicios y completado de los Unit Tests y Integration Tests necesarios para la app. Se crean los UseCases para actualizar y borrar notas.
 
 7. **Snapshot Tests en SwiftUI**  
-   - **Video**: [SNAPSHOT TESTS en SWIFTUI (Parte 7)](https://www.swiftbeta.com/testing-parte-7)  
+   - **Video**: [SNAPSHOT TESTS en SWIFTUI (Parte 7)](https://www.swiftbeta.com/snapshots-tests-en-swiftui-y-swift/)  
    - **Descripción**:  
      Implementación de Snapshot Tests para capturar la interfaz de usuario y compararla con versiones de referencia, asegurando que la UI no ha cambiado inesperadamente.
 
 8. **UITests en SwiftUI y Xcode**  
-   - **Video**: [UITests en SwiftUI (Parte 8)](https://www.swiftbeta.com/testing-parte-8)  
+   - **Video**: [UITests en SwiftUI (Parte 8)](https://www.swiftbeta.com/uitests-en-swiftui-y-xcode/)  
    - **Descripción**:  
      Guía para realizar UITests en Xcode, asegurando una experiencia de usuario impecable mediante la automatización de pruebas de interfaz.
 
