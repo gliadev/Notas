@@ -57,35 +57,19 @@ Bienvenido al proyecto **Notas App**, una aplicación de notas desarrollada en S
    - **Descripción**:  
      Guía para realizar UITests en Xcode, asegurando una experiencia de usuario impecable mediante la automatización de pruebas de interfaz.
 
----
+
+
 
 ## 🚀 Clonar el Proyecto
-
-```bash
-git clone https://github.com/tu-usuario/NotasApp.git
-
-
-
-
-
-
-
-
-🚀 Clonar el Proyecto
-
-bash
 Copiar código
 git clone https://github.com/tu-usuario/NotasApp.git
 Abre el proyecto en Xcode:
 Doble clic en Notas.xcodeproj.
 Instala las dependencias (si aplica):
 Ejecuta pod install si utilizas CocoaPods.
+
+
 🛠️ Uso
-
-
-
-
-
 Ejecución de Tests
 Unit Tests: Selecciona el esquema UnitTests y presiona Cmd+U.
 Integration Tests: Selecciona el esquema IntegrationTests y presiona Cmd+U.
@@ -96,6 +80,7 @@ UITests: Selecciona el esquema UITests y presiona Cmd+U.
 Este proyecto ha sido desarrollado basado en la ruta de estudio de SwiftBeta sobre pruebas en Swift y SwiftUI. Puedes seguir su contenido para obtener un entendimiento más profundo sobre testing en iOS.
 
 Además, he creado unos apuntes detallados en Notion que cubren todo lo visto en este proyecto. Puedes acceder a ellos aquí: Apuntes en Notion sobre Testing en Swift y SwiftUI.
+
 
 📸 Capturas de Pantalla
 ![361177904-76060f65-2a06-4c06-96a4-586b136abe09](https://github.com/user-attachments/assets/eb4b4183-e88b-40db-8b36-e45b69835234)
