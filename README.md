@@ -89,4 +89,12 @@ UITests: Selecciona el esquema UITests y presiona Cmd+U.
 Este proyecto ha sido desarrollado basado en la ruta de estudio de SwiftBeta sobre pruebas en Swift y SwiftUI. Puedes seguir su contenido para obtener un entendimiento más profundo sobre testing en iOS.
 
 Además, he creado unos apuntes detallados en Notion que cubren todo lo visto en este proyecto. Puedes acceder a ellos aquí: Apuntes en Notion sobre Testing en Swift y SwiftUI.
-https://shadowed-anaconda-2dc.notion.site/TESTING-en-Swift-y-SwiftUI-200cf53a2bd242c29c1381ac6b51de00
+https://shadowed-anaconda-2dc.notion.site/TESTING-en-Sw
+
+![Captura de pantalla 25 08 2024 a 02 28 16 a  m](https://github.com/user-attachments/assets/76060f65-2a06-4c06-96a4-586b136abe09)
+ift-y-SwiftUI-200cf53a2bd242c29c1381ac6b51de00
+
+![Simulator Screenshot - Clone 1 of iPhone 15 Pro - 2024-08-25 at 02 32 15](https://github.com/user-attachments/assets/d46fb013-d68f-43ae-bfa0-8fb0b97a4b92)
+
+
+
