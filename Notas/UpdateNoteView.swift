@@ -8,32 +8,23 @@
 import SwiftUI
 
 struct UpdateNoteView: View {
-    @ObservedObject var viewModel: ViewModel
-    let id: UUID
-    @State var title: String
-    @State var text: String
-
-    @Environment(\.dismiss) private var dismiss
-
+    var viewModel: ViewModel
+    let identifier: UUID
+    @State var title: String = ""
+    @State var text: String = ""
+    
+    @Environment(\.dismiss) private  var dismiss
+    
     var body: some View {
         VStack {
             Form {
                 Section {
-                    TextField("*Título", text: $title)
-                    TextField("Texto", text: $text)
-                }
-            }
-            .navigationTitle("Modificar Nota")
-            .toolbar {
-                ToolbarItem {
-                    Button {
-                        viewModel.updateNoteWith(id: id, newTitle: title, newText: text)
-                        dismiss()
-                    } label: { Text("Guardar").bold() }
+                    TextField("", text: $title, prompt: Text("*Título"), axis: .vertical)
+                    TextField("", text: $text, prompt: Text("*Texto"), axis: .vertical)
                 }
             }
             Button(action: {
-                viewModel.removeNoteWith(id: id)
+                viewModel.removeNoteWith(identifier: identifier)
                 dismiss()
             }, label: {
                 Text("Eliminar Nota")
@@ -43,5 +34,26 @@ struct UpdateNoteView: View {
             .buttonStyle(BorderlessButtonStyle())
             Spacer()
         }
+        .background(Color(uiColor: .systemGroupedBackground))
+        .toolbar {
+            ToolbarItem {
+                Button {
+                    viewModel.updateNoteWith(identifier: identifier, newTitle: title, newText: text)
+                    dismiss()
+                } label: {
+                    Text("Guardar")
+                        .bold()
+                }
+            }
+        }
+        .navigationTitle("Modificar Nota")
+    }
+}
+
+
+#Preview {
+    
+    NavigationStack {
+        UpdateNoteView(viewModel: .init(), identifier: .init(), title: "@gliaDev", text: "Aprendiendo sobre Test")
     }
 }
