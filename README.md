@@ -10,6 +10,8 @@ Integration Tests: Validación de la interacción entre componentes con SwiftDat
 Mocks e Inyección de Dependencias: Uso de mocks para aislar dependencias en las pruebas.
 Snapshot Tests: Verificación visual de la interfaz de usuario.
 UITests: Pruebas de la interfaz de usuario para asegurar una experiencia impecable.
+
+
 📚 Contenido del Curso
 
 Introducción al Testing en Swift
