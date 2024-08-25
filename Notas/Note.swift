@@ -8,18 +8,25 @@
 import Foundation
 import SwiftData
 
+
+// La clase Note representa una nota en la aplicación, que es identificable y compatible con Hashable.
 @Model
 class Note: Identifiable, Hashable {
+    // Identificador único para cada nota.
     @Attribute(.unique) var identifier: UUID
+    // Título de la nota.
     var title: String
+    // Texto opcional de la nota.
     var text: String?
+    // Fecha de creación de la nota.
     var createdAt: Date
     
-    // propiedad computada, si tengo un text me lo da si no una cadena vacia
+    // Propiedad computada que devuelve el texto de la nota o una cadena vacía si el texto es nil.
     var getText: String {
         text ?? ""
     }
     
+    // Inicializador que configura todas las propiedades de la nota.
     init(identifier: UUID = UUID(), title: String, text: String?, createdAt: Date) {
         self.identifier = identifier
         self.title = title

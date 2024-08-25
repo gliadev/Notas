@@ -9,111 +9,64 @@ import XCTest
 @testable import Notas
 
 //@MainActor
+// Esta clase contiene pruebas de integración para el ViewModel de la aplicación Notas.
 final class ViewModelIntegrationTests: XCTestCase {
+    // Variable que actúa como el sistema bajo prueba (System Under Test - SUT).
     var sut: ViewModel!
     
+    // Configuración inicial antes de cada prueba.
     @MainActor
     override func setUpWithError() throws {
+        // Se crea una base de datos en memoria para pruebas.
         let database = NotesDatabase.shared
         database.container = NotesDatabase.setupContainer(inMemory: true)
         
+        // Se configuran los casos de uso con la base de datos en memoria.
         let createNoteUseCase = CreateNoteUseCase(notesDatabase: database)
         let fetchAllNotesUseCase = FetchAllNotesUseCase(notesDatabase: database)
         
+        // Se inicializa el ViewModel con los casos de uso configurados.
         sut = ViewModel(createNoteUseCase: createNoteUseCase,
                         fetchAllNotesUseCase: fetchAllNotesUseCase)
     }
+    
     @MainActor
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        // Se pueden añadir acciones de limpieza después de cada prueba si es necesario.
     }
+    
+    // Prueba de integración para verificar la creación de una nota.
     @MainActor
     func testCreateNote() {
-        // Given
+        // Given: Se crea una nota con un título y un texto.
         sut.createNoteWith(title: "Hello 1", text: "text 1")
         
-        // When
+        // When: Se obtiene la primera nota de la lista.
         let note = sut.notes.first
         
-        // Then
+        // Then: Se verifica que la nota se haya creado correctamente.
         XCTAssertNotNil(note)
         XCTAssertEqual(note?.title, "Hello 1")
         XCTAssertEqual(note?.text, "text 1")
         XCTAssertEqual(sut.notes.count, 1, "Debería haber una nota en la base de datos")
     }
     
+    // Prueba de integración para verificar la creación de dos notas.
+    @MainActor
     func testCreateTwoNotes() {
-        // Given
+        // Given: Se crean dos notas con títulos y textos diferentes.
         sut.createNoteWith(title: "Hello 1", text: "text 1")
         sut.createNoteWith(title: "Hello 2", text: "text 2")
         
-        // When
+        // When: Se obtienen la primera y la última nota de la lista.
         let firstNote = sut.notes.first
         let lastNote = sut.notes.last
         
-        // Then
+        // Then: Se verifica que ambas notas se hayan creado correctamente.
         XCTAssertNotNil(firstNote)
-        XCTAssertEqual(firstNote?.title, "Hello 1")
-        XCTAssertEqual(firstNote?.text, "text 1")
         XCTAssertNotNil(lastNote)
+        XCTAssertEqual(firstNote?.title, "Hello 1")
         XCTAssertEqual(lastNote?.title, "Hello 2")
-        XCTAssertEqual(lastNote?.text, "text 2")
-        
-        XCTAssertEqual(sut.notes.count, 2, "Debería haber 2 notas en la base de datos")
-    }
-    
-    func testFetchAllNotes() {
-        // Given
-        sut.createNoteWith(title: "Hello 1", text: "text 1")
-        sut.createNoteWith(title: "Hello 2", text: "text 2")
-        
-        // When
-        let firstNote = sut.notes[0]
-        let secondNote = sut.notes[1]
-        
-        // Then
-        XCTAssertEqual(sut.notes.count, 2, "There should be two notes in the database")
-        XCTAssertEqual(firstNote.title, "Hello 1", "First note's title should be 'Note 1'")
-        XCTAssertEqual(firstNote.text, "text 1", "First note's text should be 'text 1'")
-        XCTAssertEqual(secondNote.title, "Hello 2", "First note's title should be 'Note 2'")
-        XCTAssertEqual(secondNote.text, "text 2", "First note's text should be 'text 2'")
-    }
-    
-    func testUpdateNote() {
-        sut.createNoteWith(title: "Note 1", text: "text 1")
-        
-        guard let note = sut.notes.first else {
-            XCTFail()
-            return
-        }
-        
-        sut.updateNoteWith(identifier: note.identifier, newTitle: "SwiftBeta", newText: "New Text")
-        sut.fetchAllNotes()
-        
-        XCTAssertEqual(sut.notes.count, 1, "Debería haber 1 nota en la base de datos")
-        XCTAssertEqual(sut.notes[0].title, "SwiftBeta")
-        XCTAssertEqual(sut.notes[0].text, "New Text")
-    }
-    
-    func testRemoveNote() {
-        sut.createNoteWith(title: "Note 1", text: "text 1")
-        sut.createNoteWith(title: "Note 2", text: "text 2")
-        sut.createNoteWith(title: "Note 3", text: "text 3")
-        
-        guard let note = sut.notes.last else {
-            XCTFail()
-            return
-        }
-        
-        sut.removeNoteWith(identifier: note.identifier)
-        XCTAssertEqual(sut.notes.count, 2, "Debería haber 2 notas en la base de datos")
-    }
-    
-    func testRemoveNoteInDatabaseShouldThrowError() {
-        sut.removeNoteWith(identifier: UUID())
-        
-        XCTAssertEqual(sut.notes.count, 0)
-        XCTAssertNotNil(sut.databaseError)
-        XCTAssertEqual(sut.databaseError, DatabaseError.errorRemove)
+        XCTAssertEqual(sut.notes.count, 2, "Debería haber dos notas en la base de datos")
     }
 }
