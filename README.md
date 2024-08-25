@@ -1,6 +1,6 @@
 # 📝 Notas App - Proyecto de Testing en Swift y SwiftUI
 
-Bienvenido al proyecto **Notas App**, una aplicación de notas desarrollada en SwiftUI como parte de un curso de testing de [@SwiftBeta](https://www.swiftbeta.com). Aquí aprenderás a crear tests en Swift y SwiftUI, desde tests unitarios hasta tests de integración, snapshots y UITests usando Xcode. Este proyecto es ideal para fortalecer tus habilidades como desarrollador iOS y comprender mejor el uso de mocks e inyección de dependencias en tus pruebas.
+Bienvenido al proyecto **Notas App**, una aplicación de notas desarrollada en SwiftUI como parte de un curso de testing de [@SwiftBeta](https://www.swiftbeta.com/tag/testing/). Aquí aprenderás a crear tests en Swift y SwiftUI, desde tests unitarios hasta tests de integración, snapshots y UITests usando Xcode. Este proyecto es ideal para fortalecer tus habilidades como desarrollador iOS y comprender mejor el uso de mocks e inyección de dependencias en tus pruebas.
 
 ---
 
@@ -77,7 +77,7 @@ Snapshot Tests: Selecciona el esquema SnapshotTests y presiona Cmd+U.
 UITests: Selecciona el esquema UITests y presiona Cmd+U.
 📚 Recursos Adicionales
 
-Este proyecto ha sido desarrollado basado en la ruta de estudio de SwiftBeta sobre pruebas en Swift y SwiftUI. Te animo seguir su contenido si quieres mejorar.
+Este proyecto ha sido desarrollado basado en la ruta de estudio de [@SwiftBeta](https://www.swiftbeta.com) sobre pruebas en Swift y SwiftUI. Te animo seguir su contenido si quieres mejorar.
 
 Además, he creado unos apuntes detallados en Notion que cubren todo lo visto en este proyecto. 
 Puedes acceder a ellos aquí: [Apuntes en Notion sobre Testing en Swift y SwiftUI.](https://shadowed-anaconda-2dc.notion.site/TESTING-en-Swift-y-SwiftUI-200cf53a2bd242c29c1381ac6b51de00)  
